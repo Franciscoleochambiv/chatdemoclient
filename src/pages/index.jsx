@@ -102,6 +102,8 @@ export default function MainPage() {
   var muestra = "";
   console.log(state.users[0])
 
+  console.log(conversations)
+
  if (state.users[0]!=null){
   muestra =(
     <List>
@@ -118,7 +120,7 @@ export default function MainPage() {
   return (
     <>
       <Typography className={classes.title} variant="h4">
-        Chat Municipalidad Distrital de Chamca
+        Chat 
       </Typography>
       <Paper className={classes.paper}>
         <Card className={classes.left}>
