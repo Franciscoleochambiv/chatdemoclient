@@ -102,7 +102,7 @@ export default function ChatPage() {
       setMessages((prev) => [...prev, data]);
       if (data.sent_by._id != userId) audio.play();
     });
-  }, [socket]);
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
