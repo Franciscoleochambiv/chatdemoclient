@@ -12,11 +12,11 @@ import openSocket from "socket.io-client";
 import { addNewUser, removeUserOffline } from "./pages/redux/usersSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-export const socket = openSocket("http://localhost:8006/");
+export const socket = openSocket("http://adryan3.sytes.net:8006/");
 
 axios.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
-  config.baseURL = "http://localhost:8006/";
+  config.baseURL = "http://adryan3.sytes.net:8006/";
   if (token) config.headers.authorization = `Bearer ${token}`;
   return config;
 });
